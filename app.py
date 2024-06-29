@@ -100,3 +100,6 @@ heat_data = [[row['latitude'], row['longitude']] for index, row in data.iterrows
 m_heat = folium.Map(location=[0, 0], zoom_start=2)
 HeatMap(heat_data).add_to(m_heat)
 st_folium(m_heat, width=700)
+
+# 使用 markdown 来控制间距
+st.markdown("<style> div.row-widget.stRadio > div {flex-direction:row;} </style>", unsafe_allow_html=True)
